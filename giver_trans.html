@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Giver Tranaction page</title>
+    <script language="javascript">
+        function nums() {
+            var num;
+            num= event.keyCode;
+            if (num>=48 && num<=57) {
+                event.keyCode=nums;
+                return true;
+            }
+            else{
+                event.keyCode=0;
+                return false;
+            }    
+        }
+
+        function abcd() {
+            var abc;
+            abc= event.keyCode;
+            if((abc>=65 && abc<=90)||(abc>=97 && abc<=122)|| abc==32){
+                event.keyCode=abc;
+                return true;
+            }
+            else{
+                event.keyCode=0;    
+                return false;
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <form name="giver_trans" action="giver_trans.php" method="post">
+        <center>
+            <table>
+                <Caption>Giver Information</Caption>  
+                <tr>
+                    <td>arno:</td>
+                    <td><input type="text" name="arno" onkeypress="return nums()" id=""></td>
+                </tr>
+                <tr>
+                    <td>Giver id:</td>
+                    <td><input type="text" name="givid" onkeypress="return nums()" id=""></td>
+                </tr>
+                <tr>
+                    <td>Giv date:</td>
+                    <td><input type="date" name="givdate" id=""></td>
+                </tr>
+                <tr>
+                    <td>event:</td>
+                    <td><input type="text" name="event" id=""></td>
+                </tr>
+                <tr>
+                    <td>Reason:</td>
+                    <td><input type="text" name="reason" id=""></td>
+                </tr>
+                <tr>
+                    <td>Persons:</td>
+                    <td><input type="text" name="persons" onkeypress="return nums()" id="" ></td>
+                </tr>
+                <tr>
+                    <td>oftime:</td>
+                    <td><input type="text" name="oftime" id=""></td>
+                </tr>
+                <tr>
+                    <td>Remark:</td>
+                    <td><input type="text" name="remark" id=""></td>
+                </tr>
+                <tr>
+                    <td>Status:</td>
+                    <td><input type="text" name="status" id=""></td>
+                </tr>
+            </table>
+            
+            <input type="submit" name="sbm" value="Submit">
+            <input type="submit" name="sbm" value="Update">
+            <input type="submit" name="sbm" value="Delete">
+            <input type="submit" name="sbm" value="Search">
+            <input type="submit" name="sbm" value="Display">
+    </center>
+    </form>
+
+</body>
+</html>

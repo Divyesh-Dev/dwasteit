@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Taker Tranaction page</title>
+    <script language="javascript">
+        function nums() {
+            var num;
+            num= event.keyCode;
+            if (num>=48 && num<=57) {
+                event.keyCode=nums;
+                return true;
+            }
+            else{
+                event.keyCode=0;
+                return false;
+            }    
+        }
+
+        function abcd() {
+            var abc;
+            abc= event.keyCode;
+            if((abc>=65 && abc<=90)||(abc>=97 && abc<=122)|| abc==32){
+                event.keyCode=abc;
+                return true;
+            }
+            else{
+                event.keyCode=0;    
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="taker_trans" action="taker_trans.php" method="post">
+        <center>
+            <table>
+                <Caption>Taker Information</Caption>
+                <tr>
+                    <td>Srno:</td>
+                    <td><input type="text" name="srno" onkeypress="return nums()" id=""></td>
+                </tr>
+                <tr>
+                    <td>Taker id:</td>
+                    <td><input type="text" name="takid" onkeypress="return nums()" id=""></td>
+                </tr>
+                <tr>
+                    <td>Take date:</td>
+                    <td><input type="date" name="trdate" id=""></td>
+                </tr>
+                <tr>
+                    <td>Persons:</td>
+                    <td><input type="text" name="persons" onkeypress="return nums()" id=""></td>
+                </tr>
+                <tr>
+                    <td>Oftime:</td>
+                    <td><input type="text" name="oftime" id=""></td>
+                </tr>
+                <tr>
+                    <td>Status:</td>
+                    <td><input type="text" name="status" id=""></td>
+                </tr>
+                <tr>
+                    <td>Giver id:</td>
+                    <td><input type="text" name="givid" onkeypress="return nums()" id=""></td>
+                </tr>
+            </table>
+            
+            <input type="submit" name="sbm" value="Submit">
+            <input type="submit" name="sbm" value="Update">
+            <input type="submit" name="sbm" value="Delete">
+            <input type="submit" name="sbm" value="Search">
+            <input type="submit" name="sbm" value="Display">
+            <input type="submit" name="sbm" value="Delete_all">
+    </center>
+    </form>
+
+</body>
+</html>

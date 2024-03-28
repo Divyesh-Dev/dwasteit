@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Taker page</title>
+    <script language="javascript">
+        function nums() {
+            var num;
+            num= event.keyCode;
+            if (num>=48 && num<=57) {
+                event.keyCode=nums;
+                return true;
+            }
+            else{
+                event.keyCode=0;
+                return false;
+            }    
+        }
+
+        function abcd() {
+            var abc;
+            abc= event.keyCode;
+            if((abc>=65 && abc<=90)||(abc>=97 && abc<=122)|| abc==32){
+                event.keyCode=abc;
+                return true;
+            }
+            else{
+                event.keyCode=0;    
+                return false;
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <form name="taker" action="taker.php" method="post">
+        <center>
+            <table>
+                <Caption>taker Information</Caption>
+                <tr>
+                    <td>takers id:</td>
+                    <td><input type="text" name="takid" id="" onkeypress="return nums()"></td>
+                </tr>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="name" id=""onkeypress="return abcd()"></td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td><input type="text" name="addr" id=""></td>
+                </tr>
+                <tr>
+                    <td>City:</td>
+                    <td><input type="text" name="city" id="" onkeypress="return abcd()"></td>
+                </tr>
+                <tr>
+                    <td>Contact No:</td>
+                    <td><input type="number" name="cont_no" id=""></td>
+                </tr>
+                <tr>
+                    <td>Email ID:</td>
+                    <td><input type="email" name="email_id" id=""></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" name="password" id=""></td>
+                </tr>
+                <tr>
+                    <td>Organizaion Type:</td>
+                    <td><input type="text" name="org_type" id="" onkeypress="return abc()"></td>
+                </tr>
+                <tr>
+                    <td>Sub Type:</td>
+                    <td><input type="text" name="sub_type" id=""></td>
+                </tr>
+            </table>
+            
+            <input type="submit" name="sbm" value="Submit">
+            <input type="submit" name="sbm" value="Update">
+            <input type="submit" name="sbm" value="Delete">
+            <input type="submit" name="sbm" value="Search">
+            <input type="submit" name="sbm" value="Display">
+    </center>
+    </form>
+
+</body>
+</html>
